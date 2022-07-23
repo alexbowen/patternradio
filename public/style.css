@@ -10922,8 +10922,17 @@ textarea.form-control-lg {
 }
 body {
   background-color: #333;
+  animation: load 2s linear;
 }
 
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body::after {
   content: " ";
   position: absolute;
