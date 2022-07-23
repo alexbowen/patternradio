@@ -13,7 +13,7 @@ body::after {
   left: 0;
   width: 100%; 
   height: 100%;  
-  opacity: .6; 
+  opacity: .4; 
   background-image: url(mixer.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -52,12 +52,38 @@ body::after {
   }
 }
 
+.title {
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1px;
+  line-height:2;
+  position: absolute;
+  top: 2em;
+  width: 100%;
+
+  h3 {
+    background-image: url(https://media.giphy.com/media/t2aAdTgnU9Ie6jvG0W/giphy-downsized-large.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+  }
+}
+
 header {
-  background-image: url(head-bg.jpeg);
+
   height: 12rem;
   line-height: 12rem;
   position: relative;
   z-index: 100;
+
+
 }
 
 .logo {
@@ -67,10 +93,10 @@ header {
   margin: 0 auto;
   width: 100%;
 
-  h1 {
-    font-family: 'Comfortaa';
-    font-weight: 300;
-    color: #ffffff;
-    display: inline-block;
-  }
+  // h1 {
+  //   font-family: 'Comfortaa';
+  //   font-weight: 300;
+  //   color: #ffffff;
+  //   display: inline-block;
+  // }
 }
