@@ -1,0 +1,76 @@
+$font-size-base: 1.6rem;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+body {
+  background-color: #333;
+}
+
+body::after {
+  content: " ";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  opacity: .6; 
+  background-image: url(mixer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.transmission {
+  margin: auto;
+  margin-top: 10rem;
+  background-color: #666;
+  width: 40%;
+  height: 40vh;
+  border-radius: 50%;
+  display: grid;
+  animation: ripple 6s linear infinite;
+}
+
+.transmission::before,
+.transmission::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  animation: inherit;
+  animation-delay: 2s;
+}
+
+.transmission::after {
+  animation-delay: 4s;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 2rem rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 16rem rgba(255, 255, 255, 0);
+  }
+}
+
+header {
+  background-image: url(head-bg.jpeg);
+  height: 12rem;
+  line-height: 12rem;
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  line-height: inherit;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+
+  h1 {
+    font-family: 'Comfortaa';
+    font-weight: 300;
+    color: #ffffff;
+    display: inline-block;
+  }
+}
