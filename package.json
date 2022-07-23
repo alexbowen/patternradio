@@ -13,13 +13,14 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.0-beta1",
+    "bootstrap-icons": "^1.9.1",
     "ejs": "^3.1.5",
     "express": "^4.15.2"
   },
   "devDependencies": {
     "got": "^11.3.0",
-    "tape": "^4.7.0",
-    "sass": "^1.53.0"
+    "sass": "^1.53.0",
+    "tape": "^4.7.0"
   },
   "repository": {
     "type": "git",

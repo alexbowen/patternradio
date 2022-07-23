@@ -1,9 +1,9 @@
-$font-size-base: 1.6rem;
+$font-size-base: 1.8rem;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 body {
-  background-color: #333;
+  background-color: #666;
   animation: load 2s linear;
 }
 
@@ -71,14 +71,14 @@ body::after {
   justify-content: center;
   height: 100vh;
   letter-spacing: 1px;
-  line-height:2;
+  line-height: 2;
   position: absolute;
   top: 2em;
   width: 100%;
 
-  h3 {
-    background-image: url(https://media.giphy.com/media/t2aAdTgnU9Ie6jvG0W/giphy-downsized-large.gif);
-    background-size: cover;
+  h2 {
+    background-image: url(https://media.giphy.com/media/3HG8cKDPyl9QoG2KvW/giphy.gif);
+    background-size: contain;
     color: transparent;
     -moz-background-clip: text;
     -webkit-background-clip: text;
@@ -87,13 +87,12 @@ body::after {
 }
 
 header {
-
   height: 12rem;
   line-height: 12rem;
   position: relative;
   z-index: 100;
-
-
+  background-color: #333;
+  opacity: 0.8;
 }
 
 .logo {
@@ -102,11 +101,37 @@ header {
   text-align: center;
   margin: 0 auto;
   width: 100%;
+}
 
-  // h1 {
-  //   font-family: 'Comfortaa';
-  //   font-weight: 300;
-  //   color: #ffffff;
-  //   display: inline-block;
-  // }
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index:1000;
+  color: #bbbbbb;
+  padding: 0 1em 0.5em;
+
+  .copyright {
+    line-height: 1em;
+    color: inherit;
+    font-size: 0.9rem;
+  }
+
+  .list-group {
+    line-height: 1em;
+
+    .list-group-item {
+      border: none;
+      background-color: transparent;
+
+      a {
+        color: #999999;
+
+        &:hover {
+          color: #cccccc;
+        }
+      }
+    }
+  }
 }
