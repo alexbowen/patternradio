@@ -1,47 +1,46 @@
-$font-size-base: 1.8rem;
+$font-size-base: 1rem;
+$navbar-light-color: #bbbbbb;
+$navbar-light-active-color: #fff;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 body {
-  background-color: #666;
-  animation: load 0.5s linear;
-}
+  // &.holding {
+    background-color: #666;
 
-@keyframes load {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-body::after {
-  content: " ";
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;  
-  opacity: .4; 
-  background-image: url(mixersmall.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @media only screen and (min-width: 720px) {
-    background-image: url(mixer.jpg);
-  }
+    // &::after {
+    //   content: " ";
+    //   position: absolute;
+    //   top: 0; 
+    //   left: 0;
+    //   width: 100%; 
+    //   height: 100%; 
+    // }
+    background-image: url(mixersmall.jpg);
+    background-size: cover;
+  
+  
+    @media only screen and (min-width: 720px) {
+      background-image: url(mixer.jpg);
+    }
+  // }
 }
 
 .transmission {
   margin: auto;
-  margin-top: 10rem;
+  margin-top: 6rem;
   background-color: #666;
   width: 40%;
-  height: 40vh;
+  height: 70vh;
   border-radius: 50%;
   display: grid;
   animation: ripple 6s linear infinite;
+  opacity: 0.8;
+
+  @media only screen and (min-width: 720px) {
+    height: 40vh;
+    margin-top: 9rem;
+  }
 }
 
 .transmission::before,
@@ -79,6 +78,7 @@ body::after {
   position: absolute;
   top: 2em;
   width: 100%;
+  z-index: 1000;
 
   h2 {
     background-image: url(https://media.giphy.com/media/3HG8cKDPyl9QoG2KvW/giphy.gif);
@@ -87,20 +87,31 @@ body::after {
     -moz-background-clip: text;
     -webkit-background-clip: text;
     text-transform: uppercase;
+    font-size: 4rem;
   }
 }
 
 header {
-  height: 8rem;
-  line-height: 8rem;
+  height: 6rem;
+  line-height: 6rem;
   position: relative;
   z-index: 100;
-  background-color: #333;
-  opacity: 0.8;
+  background-color: rgba(51, 51, 51, 0.8);
 
   @media only screen and (min-width: 720px) {
-    height: 12rem;
-    line-height: 12rem;
+    height: 9rem;
+    line-height: 9rem;
+  }
+}
+
+nav {
+  z-index: 1000;
+  background-color: rgba(153, 153, 153, 0.6);
+
+  form {
+    @media only screen and (min-width: 720px) {
+      order: 2;
+    }
   }
 }
 
@@ -116,15 +127,19 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: transparent;
+  color: #bbb;
   z-index:1000;
-  color: #bbbbbb;
-  padding: 0 1em 0.5em;
+  padding: 0.5rem 1rem;
+  opacity: 0.8;
 
   .copyright {
-    line-height: 1em;
     color: inherit;
     font-size: 0.9rem;
+    vertical-align: bottom;
+
+    @media only screen and (min-width: 720px) {
+      line-height: 0.4em;
+    }
   }
 
   .list-group {
